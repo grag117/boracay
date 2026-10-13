@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Active Facebook Social Media Button */
+    /* Social Media Section */
     .social-section {
       margin-top: 25px;
     }
@@ -31,7 +31,6 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
-      background: #1877F2;
       transition: transform .25s, opacity .25s;
     }
 
@@ -46,7 +45,27 @@
       fill: currentColor;
     }
 
-    /* Footer Facebook Icon */
+    /* Social Media Brand Colors */
+    .social-facebook {
+      background: #1877F2;
+    }
+
+    .social-instagram {
+      background: linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+      );
+    }
+
+    .social-tiktok {
+      background: #111111;
+    }
+
+    /* Footer Social Media Icons */
     .footer-socials {
       display: flex;
       flex-wrap: wrap;
@@ -66,13 +85,24 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 22px;
-      background: #1877F2;
       transition: background .2s, transform .2s;
     }
 
     .footer-socials a:hover {
-      background: #0866FF;
       transform: translateY(-3px);
+      opacity: .85;
+    }
+
+    .footer-facebook {
+      background: #1877F2;
+    }
+
+    .footer-instagram {
+      background: #d62976;
+    }
+
+    .footer-tiktok {
+      background: #111111;
     }
 
     @media (max-width: 600px) {
@@ -90,6 +120,7 @@
 
 <body>
 
+  <!-- TOP BAR -->
   <div class="topbar">
     Your Boracay escape starts here · Malay, Aklan, Philippines
   </div>
@@ -104,7 +135,8 @@
       </span>
     </a>
 
-    <button class="menu-toggle"
+    <button
+      class="menu-toggle"
       aria-label="Open menu"
       onclick="document.querySelector('.navlinks').classList.toggle('open')">
       ☰ Menu
@@ -122,7 +154,7 @@
 
   <main>
 
-    <!-- CONTACT PAGE HERO -->
+    <!-- PAGE INTRODUCTION -->
     <section class="page-hero">
       <span class="eyebrow">We’re happy to help</span>
       <h1>Contact & visitor information</h1>
@@ -132,7 +164,7 @@
       </p>
     </section>
 
-    <!-- CONTACT INFORMATION AND MAP -->
+    <!-- CONTACT DETAILS AND MAP -->
     <section class="section">
       <div class="grid two">
 
@@ -156,33 +188,70 @@
             Local tour schedules vary by provider, weather and season.
           </p>
 
-          <!-- ACTIVE FACEBOOK SOCIAL MEDIA -->
+          <!-- ACTIVE SOCIAL MEDIA LINKS -->
           <div class="social-section">
             <h3>🌴 Follow Our Island Adventures!</h3>
 
             <p>
-              Connect with Explore Boracay on our Facebook page!
+              Connect with Explore Boracay on our social media accounts!
             </p>
 
             <div class="social-links">
+
+              <!-- FACEBOOK -->
               <a
-                class="social-btn"
+                class="social-btn social-facebook"
                 href="https://www.facebook.com/share/18DUwGNL4N/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit Explore Boracay Facebook page">
+                aria-label="Visit our Facebook page">
 
                 <svg viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.3v3h2.8v8z"/>
                 </svg>
 
-                Visit Our Facebook Page
+                Facebook
               </a>
+
+              <!-- INSTAGRAM -->
+              <a
+                class="social-btn social-instagram"
+                href="https://instagram.com/sunsandseatraveltours?xtok=MW93YnZ0dWU3N2MwMg%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our Instagram account">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5"
+                    fill="none" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="12" r="4"
+                    fill="none" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="17.5" cy="6.5" r="1.2"/>
+                </svg>
+
+                Instagram
+              </a>
+
+              <!-- TIKTOK -->
+              <a
+                class="social-btn social-tiktok"
+                href="https://www.tiktok.com/@sun.sand.sea.trav?_r=1&_t=ZS-9AWrbVMXJZN"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit our TikTok account">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19.6 7.1a6.4 6.4 0 0 1-4-2V15a5.5 5.5 0 1 1-5.5-5.5c.4 0 .8 0 1.2.1v3a2.5 2.5 0 1 0 1.5 2.3V2h3a6.3 6.3 0 0 0 3.8 5.1z"/>
+                </svg>
+
+                TikTok
+              </a>
+
             </div>
 
             <p class="small muted">
-              Follow us for Boracay travel tips, beach photos,
-              destination inspiration and island updates.
+              Follow us for Boracay travel tips, destination inspiration,
+              beach photos and island updates.
             </p>
           </div>
 
@@ -278,7 +347,7 @@
   <footer class="footer">
     <div class="footer-grid">
 
-      <!-- FOOTER BRAND AND FACEBOOK -->
+      <!-- BRAND AND SOCIAL MEDIA -->
       <div>
         <a class="brand" href="index.html">
           <img src="logo-boracay.png" alt="Explore Boracay logo">
@@ -293,17 +362,41 @@
           island flavors and unforgettable coastal experiences.
         </p>
 
-        <!-- ACTIVE FACEBOOK LINK IN FOOTER -->
-        <h3>Follow Us on Facebook</h3>
+        <!-- ACTIVE SOCIAL MEDIA LINKS IN FOOTER -->
+        <h3>Follow Us</h3>
 
         <div class="footer-socials">
+
+          <!-- FACEBOOK -->
           <a
+            class="footer-facebook"
             href="https://www.facebook.com/share/18DUwGNL4N/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit Explore Boracay Facebook page">
+            aria-label="Facebook">
             f
           </a>
+
+          <!-- INSTAGRAM -->
+          <a
+            class="footer-instagram"
+            href="https://instagram.com/sunsandseatraveltours?xtok=MW93YnZ0dWU3N2MwMg%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram">
+            ◎
+          </a>
+
+          <!-- TIKTOK -->
+          <a
+            class="footer-tiktok"
+            href="https://www.tiktok.com/@sun.sand.sea.trav?_r=1&_t=ZS-9AWrbVMXJZN"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok">
+            ♪
+          </a>
+
         </div>
       </div>
 
@@ -328,6 +421,7 @@
 
     </div>
 
+    <!-- COPYRIGHT -->
     <div class="footer-bottom">
       © 2026 Explore Boracay: Sun, Sand & Sea · Educational project ·
       Photo credits on Gallery page.
